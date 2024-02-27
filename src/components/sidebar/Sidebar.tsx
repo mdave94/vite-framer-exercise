@@ -1,7 +1,7 @@
 import Links from "./links/Links";
 import "./siedebar.scss";
 import React from "react";
-import ToggleButton from "./toggleButton/toggleButton";
+import ToggleButton from "./toggleButton/ToggleButton";
 import { useState } from "react";
 import { motion } from "framer-motion";
 const Sidebar = () => {
