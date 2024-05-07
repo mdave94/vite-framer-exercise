@@ -12,9 +12,11 @@ const Hero = () => {
             <button>Learn More</button>
           </div>
           <img src="/scroll.png" alt="" />
-          <button>Learn More</button>
         </div>
       </div>
+
+      <div className="slidingTextContainer">Developer Programmer</div>
+
       <div className="imageContainer">
         <img src="/hero.png" alt="" />
       </div>
