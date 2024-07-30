@@ -1,26 +1,26 @@
- *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
- }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
 html {
-   // scroll-snap-type: y mandatory;
-    //scroll-behavior: smooth;
-    font-family: "DM Sans",sans-serif;
+  //scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  font-family: "DM Sans", sans-serif;
 }
 
-body{
-    background-color: #0c0c1d; ;
-    color: lightgray;
+body {
+  background-color: #0c0c1d;
+  color: lightgray;
 }
 
 a {
-    text-decoration: none;
-    color: inherit; //take color from parent
+  text-decoration: none;
+  color: inherit; //take color from parent
 }
 
-section{
-    height: 100vh;
-    scroll-snap-align: center;
+section {
+  height: 100vh;
+  scroll-snap-align: center;
 }
-
