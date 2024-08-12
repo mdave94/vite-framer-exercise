@@ -5,12 +5,29 @@ import Navbar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
 import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
-import Sidebar from "./components/sidebar/Sidebar";
+import { useEffect, useState } from "react";
+import Navbar2 from "./components/navbar2/Navbr2";
+
 const App = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div>
       <section id="Home">
-        <Navbar />
+        {isMobile ? <Navbar /> : <Navbar2 />}
+
         <Hero />
       </section>
       <section id="Services">
