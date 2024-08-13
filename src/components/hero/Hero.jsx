@@ -49,7 +49,6 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}> LOREM IPSUM </motion.h2>
           <motion.h1 variants={textVariants}>Web Development</motion.h1>
           <motion.div className="buttons" variants={textVariants}>
             <motion.button variants={textVariants}>Get Started</motion.button>
@@ -73,9 +72,7 @@ const Hero = () => {
         Developer Programmer
       </motion.div>
 
-      <div className="imageContainer">
-        <img src="/hero.png" alt="" />
-      </div>
+      <div className="imageContainer"></div>
     </div>
   );
 };
