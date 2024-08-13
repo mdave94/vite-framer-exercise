@@ -2,6 +2,13 @@ import { useState, useEffect } from "react";
 import "./navbar2.scss";
 
 const Navbar2 = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the section
+    }
+  };
+
   const [visible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -57,11 +64,21 @@ const Navbar2 = () => {
           <img src="./logo2.png" alt="" />
         </div>
         <div className="menu-items">
-          <div className="item">Home</div>
-          <div className="item"> Services</div>
-          <div className="item">Portfolio</div>
-          <div className="item">Contacts</div>
-          <div className="item">About</div>
+          <div onClick={() => scrollToSection("Home")} className="item">
+            Home
+          </div>
+          <div onClick={() => scrollToSection("Services")} className="item">
+            Services
+          </div>
+          <div onClick={() => scrollToSection("Portfolio")} className="item">
+            Portfolio
+          </div>
+          <div onClick={() => scrollToSection("Contacts")} className="item">
+            Contacts
+          </div>
+          <div onClick={() => scrollToSection("About")} className="item">
+            About
+          </div>
         </div>
       </div>
     </div>
